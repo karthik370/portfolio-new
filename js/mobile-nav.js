@@ -6,29 +6,37 @@ export function initMobileNav() {
 
     if (!hamburger || !navLinks) return;
 
+    // Create overlay element
+    const overlay = document.createElement('div');
+    overlay.className = 'mobile-nav-overlay';
+    document.body.appendChild(overlay);
+
     // Toggle mobile menu
-    hamburger.addEventListener('click', () => {
+    hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
         hamburger.classList.toggle('active');
         navLinks.classList.toggle('active');
+        overlay.classList.toggle('active');
         document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
     });
 
     // Close menu when clicking a link
     navLinkItems.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
+            console.log('Link clicked:', link.textContent);
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
+            overlay.classList.remove('active');
             document.body.style.overflow = '';
         });
     });
 
     // Close menu when clicking overlay
-    navLinks.addEventListener('click', (e) => {
-        if (e.target === navLinks) {
-            hamburger.classList.remove('active');
-            navLinks.classList.remove('active');
-            document.body.style.overflow = '';
-        }
+    overlay.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('active');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
     });
 
     // Close menu on escape key
@@ -36,6 +44,7 @@ export function initMobileNav() {
         if (e.key === 'Escape' && navLinks.classList.contains('active')) {
             hamburger.classList.remove('active');
             navLinks.classList.remove('active');
+            overlay.classList.remove('active');
             document.body.style.overflow = '';
         }
     });
