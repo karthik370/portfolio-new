@@ -2,6 +2,7 @@
 import IntroExperience from './intro.js';
 import HeroScene from './3d-scene.js';
 import Animations from './animations.js';
+import { initMobileNav } from './mobile-nav.js';
 
 class Portfolio {
     constructor() {
@@ -34,57 +35,12 @@ class Portfolio {
     }
 
     initNavigation() {
-        const nav = document.getElementById('nav');
-        const navToggle = document.getElementById('nav-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        // Mobile menu toggle
-        if (navToggle) {
-            navToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-
-                // Animate hamburger
-                const spans = navToggle.querySelectorAll('span');
-                if (navMenu.classList.contains('active')) {
-                    spans[0].style.transform = 'rotate(45deg) translateY(10px)';
-                    spans[1].style.opacity = '0';
-                    spans[2].style.transform = 'rotate(-45deg) translateY(-10px)';
-                } else {
-                    spans[0].style.transform = '';
-                    spans[1].style.opacity = '';
-                    spans[2].style.transform = '';
-                }
-            });
-        }
-
-        // Close mobile menu on link click
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                const spans = navToggle.querySelectorAll('span');
-                spans[0].style.transform = '';
-                spans[1].style.opacity = '';
-                spans[2].style.transform = '';
-            });
-        });
-
-        // Add active class to nav on scroll
-        let lastScroll = 0;
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            if (currentScroll > 100) {
-                nav.style.background = 'hsla(240, 15%, 12%, 0.9)';
-            } else {
-                nav.style.background = 'hsla(240, 15%, 15%, 0.4)';
-            }
-
-            lastScroll = currentScroll;
-        });
+        // Initialize mobile navigation
+        initMobileNav();
 
         // Highlight active section in nav
         const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-link');
 
         window.addEventListener('scroll', () => {
             let current = '';
@@ -115,7 +71,7 @@ class Portfolio {
 
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const navHeight = document.querySelector('.nav').offsetHeight;
+                    const navHeight = document.querySelector('.navbar')?.offsetHeight || 70;
                     const targetPosition = target.offsetTop - navHeight;
 
                     window.scrollTo({
