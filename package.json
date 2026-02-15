@@ -1,0 +1,21 @@
+{
+  "name": "govardhan-portfolio",
+  "version": "1.0.0",
+  "description": "World-class portfolio for Govardhan Reddy Bommineni with 3D effects and premium animations",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["portfolio", "3d", "webgl", "threejs", "gsap"],
+  "author": "Govardhan Reddy Bommineni",
+  "license": "MIT",
+  "dependencies": {
+    "three": "^0.160.0",
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "vite": "^5.0.12"
+  }
+}

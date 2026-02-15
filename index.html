@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Govardhan Reddy Bommineni - Software Engineering Student specializing in Full-Stack Development, Mobile Apps, and AI">
+  <meta name="keywords" content="Software Engineer, Full-Stack Developer, React, Node.js, Mobile Development">
+  <meta name="author" content="Govardhan Reddy Bommineni">
+  <title>Govardhan Reddy Bommineni | Software Engineer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+  <!-- 3D Intro/Loading Screen -->
+  <div id="intro-screen" class="intro-screen">
+    <canvas id="intro-canvas"></canvas>
+    <div class="intro-content">
+      <h1 class="intro-title">GOVARDHAN<br>REDDY</h1>
+      <div class="intro-subtitle">Software Engineer</div>
+      <div class="loading-bar">
+        <div class="loading-progress" id="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">Govardhan</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">Hi, I'm</p>
+          <h1 class="hero-title">
+            <span class="hero-name">Govardhan Reddy</span>
+            <span class="hero-name">Bommineni</span>
+          </h1>
+          <p class="hero-subtitle">
+            <span class="typing-text">Software Engineering Student</span>
+          </p>
+          <p class="hero-description">
+            Building the future with full-stack development, mobile apps, and AI.
+            Passionate about creating scalable solutions that make a difference.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="/assets/resume.pdf" download="Govardhan_Reddy_Resume.pdf" class="btn btn-secondary">Download
+              Resume</a>
+          </div>
+          <div class="hero-social">
+            <a href="mailto:govardhanbommineni@gmail.com" class="social-link" aria-label="Email">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/govardhan-bommineni-981a8534a/" target="_blank" rel="noopener"
+              class="social-link" aria-label="LinkedIn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://github.com/karthik370" target="_blank" rel="noopener" class="social-link"
+              aria-label="GitHub">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </a>
+            <a href="tel:+916304767391" class="social-link" aria-label="Phone">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-image-wrapper">
+            <div class="about-image-bg"></div>
+            <div class="about-image">
+              <img src="/assets/images/profile.jpeg" alt="Govardhan Reddy Bommineni" class="profile-photo">
+            </div>
+          </div>
+          <div class="about-text">
+            <h3 class="about-subtitle">Software Engineering Student @ CMR Institute of Technology</h3>
+            <p class="about-description">
+              I'm a passionate software engineer specializing in full-stack development and mobile applications.
+              With experience building scalable web platforms, AI-powered applications, and cross-platform mobile apps,
+              I thrive on creating innovative solutions that solve real-world problems.
+            </p>
+            <p class="about-description">
+              Currently pursuing my B.Tech in Computer Science, I've successfully delivered projects
+              handling thousands of users, integrated cutting-edge AI technologies, and published apps on the Google
+              Play Store.
+              My competitive programming rating of 1854 on LeetCode demonstrates my strong algorithmic thinking.
+            </p>
+            <div class="about-stats">
+              <div class="stat-card">
+                <div class="stat-number">100+</div>
+                <div class="stat-label">Problems Solved</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">25+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">GitHub Commits</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">July 2024 - August 2024</div>
+              <h3 class="timeline-title">Full-Stack Development Intern</h3>
+              <div class="timeline-company">Cognifyz Technologies</div>
+              <ul class="timeline-details">
+                <li>Developed complete full-stack web applications using Node.js, Express.js, MongoDB with RESTful APIs
+                  handling 100+ requests/hour</li>
+                <li>Built responsive UI with Bootstrap and advanced JavaScript DOM manipulation</li>
+                <li>Implemented OAuth authentication and external API integration</li>
+                <li>Created database integration with user authentication, Redis-based job processing, and server-side
+                  middleware</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">January 2024 - Present</div>
+              <h3 class="timeline-title">Technical Lead</h3>
+              <div class="timeline-company">Agastya Club, CMR Institute of Technology</div>
+              <ul class="timeline-details">
+                <li>Led 12-member team organizing technical workshops on algorithms and system design for students</li>
+                <li>Mentored 15+ junior students in full-stack development, improving team productivity by 30%</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card" data-project="homezest">
+            <div class="project-card-inner">
+              <div class="project-card-front">
+                <div class="project-image">
+                  <img src="/assets/images/Homezest.webp" alt="HomeZest Real Estate App" loading="lazy">
+                  <div class="project-badge">Mobile App</div>
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">HomeZest - Real Estate App</h3>
+                  <p class="project-description">
+                    Cross-platform mobile app with property listings, real-time chat, and Google Play Store publication
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card-back">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Property listing & search functionality</li>
+                  <li>Real-time messaging with WebSockets</li>
+                  <li>JWT authentication & authorization</li>
+                  <li>Cloudinary image uploads</li>
+                  <li>Push notifications integration</li>
+                  <li>Published on Google Play Store</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/karthik370" target="_blank" class="project-link">GitHub</a>
+                  <a href="https://play.google.com/store/apps/details?id=com.govardhan30.homezest&pcampaignid=web_share"
+                    target="_blank" class="project-link">Play Store</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card" data-project="telugu-ai">
+            <div class="project-card-inner">
+              <div class="project-card-front">
+                <div class="project-image project-image-ai">
+                  <img src="/assets/images/ai.jpg" alt="Telugu AI Voice Chat Platform" loading="lazy">
+                  <div class="project-badge">AI Platform</div>
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Telugu AI Voice Chat</h3>
+                  <p class="project-description">
+                    Full-stack conversational AI for Telugu language with real-time voice and text chat
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">OpenAI</span>
+                    <span class="tech-tag">WebSockets</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card-back">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>OpenAI GPT integration for Telugu</li>
+                  <li>Google Cloud Text-to-Speech</li>
+                  <li>WebSocket real-time streaming</li>
+                  <li>Glassmorphic UI design</li>
+                  <li>Mobile-responsive interface</li>
+                  <li>Google AdSense integration</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/karthik370" target="_blank" class="project-link">GitHub</a>
+                  <a href="https://teluguai-brown.vercel.app/" target="_blank" class="project-link">Live Demo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card" data-project="music">
+            <div class="project-card-inner">
+              <div class="project-card-front">
+                <div class="project-image project-image-music">
+                  <img src="/assets/images/music.webp" alt="Music Streaming Platform" loading="lazy">
+                  <div class="project-badge">Web Platform</div>
+                </div>
+                <div class="project-content">
+                  <h3 class="project-title">Music Streaming Platform</h3>
+                  <p class="project-description">
+                    High-performance streaming app with caching, analytics, and auto-scaling
+                  </p>
+                  <div class="project-tech">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">CSS</span>
+                  </div>
+                </div>
+              </div>
+              <div class="project-card-back">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Handles 100+ audio files</li>
+                  <li>99.5% uptime reliability</li>
+                  <li>Caching reduces load time by 50%</li>
+                  <li>Analytics dashboard</li>
+                  <li>500+ concurrent users support</li>
+                  <li>Deployed on Netlify</li>
+                </ul>
+                <div class="project-links">
+                  <a href="https://github.com/karthik370" target="_blank" class="project-link">GitHub</a>
+                  <a href="#" target="_blank" class="project-link">Live Site</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+      <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3 class="skill-category-title">Languages</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">JavaScript</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Java</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">C++</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">SQL</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 85%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Web Technologies</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">React.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 90%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Node.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 88%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Express.js</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Spring Boot</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Mobile Development</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">React Native</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Android (Java)</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 75%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Expo</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Databases & Cloud</h3>
+            <div class="skill-items">
+              <div class="skill-item">
+                <span class="skill-name">MongoDB</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 85%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">MySQL</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 80%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">Firebase</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 82%"></div>
+                </div>
+              </div>
+              <div class="skill-item">
+                <span class="skill-name">GCP</span>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="--skill-level: 70%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Achievements -->
+        <div class="achievements">
+          <h3 class="achievements-title">Achievements & Certifications</h3>
+          <div class="achievements-grid">
+            <div class="achievement-card">
+              <div class="achievement-icon">🏆</div>
+              <h4>LeetCode Contest Rating</h4>
+              <p>1854 Rating - 100+ Problems</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">�</div>
+              <h4>Full-Stack Development</h4>
+              <p>Infosys Springboard</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">🐍</div>
+              <h4>Python Programming</h4>
+              <p>HackerRank</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">📊</div>
+              <h4>Data Structures & Algorithms</h4>
+              <p>SmartInterviews</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">☁️</div>
+              <h4>AWS Cloud Practitioner</h4>
+              <p>In Progress</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">�💡</div>
+              <h4>SIH 2024 Participant</h4>
+              <p>Smart City Traffic Management</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">📱</div>
+              <h4>Published App Developer</h4>
+              <p>Google Play Store</p>
+            </div>
+            <div class="achievement-card">
+              <div class="achievement-icon">👨‍�</div>
+              <h4>Technical Lead</h4>
+              <p>Agastya Club</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="contact-subtitle">
+          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+        </p>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:govardhanbommineni@gmail.com">govardhanbommineni@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+916304767391">+91 6304767391</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <h4>Location</h4>
+                <p>Hyderabad, India</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form">
+            <div class="form-group">
+              <input type="text" id="name" name="name" required placeholder=" ">
+              <label for="name">Your Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required placeholder=" ">
+              <label for="email">Your Email</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" required placeholder=" ">
+              <label for="subject">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
+              <label for="message">Message</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Govardhan Reddy Bommineni. Crafted with passion and code.</p>
+      <div class="footer-social">
+        <a href="https://github.com/karthik370" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/govardhanbommineni" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:govardhanbommineni@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
